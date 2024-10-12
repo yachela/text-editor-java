@@ -15,7 +15,15 @@ public class Document {
         this.content = content;
     }
 
+    public void addContent(DocumentContent aContent){
+        this.content.add(aContent);
+        this.lastModificationDate = LocalDate.now();
+    }
+    public void removeContent(DocumentContent aContent){
 
+        this.content.remove(aContent);
+        this.lastModificationDate = LocalDate.now();
+    }
 
 
 }
