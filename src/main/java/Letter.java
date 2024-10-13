@@ -4,13 +4,11 @@ public class Letter implements DocumentContent {
     private String color;
     private int fontSize;
 
-    //Valores por defecto
     public Letter(char letter) {
         this.letter = letter;
         this.fontFamily = "Courier New";
         this.color = "black";
     }
-
     public char getLetter() {
         return letter;
     }
@@ -35,11 +33,9 @@ public class Letter implements DocumentContent {
     public void setFontSize(int fontSize) {
         this.fontSize = fontSize;
     }
-
     public void changeColor(String aColor) {
         this.color = aColor;
     }
-
     public void changeFontFamily(String aFontFamily) {
         this.fontFamily = aFontFamily;
     }

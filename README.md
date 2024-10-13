@@ -4,7 +4,6 @@ Se desea modelar un editor de texto. El mismo permite crear documentos. De un do
 Un editor permite crear, eliminar un documento dado.
 
 
-
 ## Diagrama inicial
 
 ![Diagrama de Lucidchart](diagrama.png)

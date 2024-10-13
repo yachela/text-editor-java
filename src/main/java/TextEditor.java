@@ -1,6 +1,39 @@
-public class TextEditor {
+import java.util.ArrayList;
+import java.util.List;
 
-    public void createDocument() {}
-    public void deleteDocument() {}
-    public void saveDocument() {}
+public class TextEditor {
+    private static TextEditor instance;
+    private List<Document> documents;
+
+    private TextEditor() {
+        documents = new ArrayList<>();
+    }
+
+    public static TextEditor getInstance() {
+        if (instance == null) {
+            instance = new TextEditor();
+        }
+        return instance;
+    }
+
+    public List<Document> getDocuments() {
+        return documents;
+    }
+
+    public void setDocuments(List<Document> documents) {
+        this.documents = documents;
+    }
+
+    public Document createDocument(String aTitle) {
+        if (aTitle == null || aTitle.isEmpty()) {
+            aTitle = "Untitled";
+        }
+        Document document = new Document(aTitle);
+        documents.add(document);
+        return document;
+    }
+
+    public void delete(Document aDocument) {
+        documents.remove(aDocument);
+    }
 }

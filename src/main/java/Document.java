@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -8,11 +9,11 @@ public class Document {
     private LocalDate lastModificationDate;
     private List<DocumentContent> content;
 
-    public Document(String title, Date lastModificationDate, List<DocumentContent> content) {
+    public Document(String title) {
         this.title = title;
         this.creationDate = LocalDate.now();
         this.lastModificationDate = creationDate;
-        this.content = content;
+        this.content = new ArrayList<>();
     }
 
     public void addContent(DocumentContent aContent){
@@ -24,6 +25,4 @@ public class Document {
         this.content.remove(aContent);
         this.lastModificationDate = LocalDate.now();
     }
-
-
 }
