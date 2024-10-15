@@ -36,4 +36,15 @@ public class TextEditor {
     public void delete(Document aDocument) {
         documents.remove(aDocument);
     }
+
+    public void writeDocument(Document aDocument, DocumentContent aContent, 
+                              FontFamily aFontFamily, Color aColor, 
+                              FontSize aFontSize) {
+        aDocument.addContent(aContent);
+        
+
+    }
+
+    public void writeDocument(Document doc1, Letter l) {
+    }
 }
